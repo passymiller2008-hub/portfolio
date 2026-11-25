@@ -1,3 +1,4 @@
+
 import { ArrowRight, X, Download, MapPin } from "lucide-react";
 import { FaGithub as Github, FaFacebook as Facebook } from "react-icons/fa";
 import { useMemo, useRef, useEffect, useState } from "react";
@@ -181,7 +182,7 @@ function Hero() {
         <div className="grid lg:grid-cols-[1.15fr_1fr] gap-8 sm:gap-10 md:gap-12 items-center">
 
           {/* ---------- Profile — premium editorial placement ---------- */}
-          <div className="relative animate-fade-in animation-delay-300 flex justify-center lg:justify-end order-first lg:order-last">
+          <div className="relative animate-fade-in animation-delay-300 flex justify-center lg:justify-end order-last lg:order-last">
             <div
               className="relative w-full mx-auto lg:mr-2"
               style={{ maxWidth: "min(450px, 82vw)" }}
@@ -317,40 +318,38 @@ function Hero() {
               </p>
             </div>
 
-            
-              {/* ---------- CTAs ---------- */}
-              <div className="flex flex-wrap items-center gap-3 animate-fade-in animation-delay-300">
+            {/* ---------- CTAs ---------- */}
+            <div className="flex flex-wrap items-center gap-3 animate-fade-in animation-delay-300">
 
-                {/* 1. Primary button */}
-                <a
-                  href="#contact"
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
-                >
-                  Contact Me
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
+              {/* 1. Primary button */}
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
+              >
+                Contact Me
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
 
-                {/* 2. Secondary button */}
-                <a
-                  href="#projects"
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl glass border border-white/10 text-sm font-semibold text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
-                >
-                  View Projects
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
+              {/* 2. Secondary button */}
+              <a
+                href="#projects"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl glass border border-white/10 text-sm font-semibold text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+              >
+                View Projects
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
 
-                {/* 3. Tertiary button */}
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-transparent text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 hover:-translate-y-1 transition-all duration-300"
-                >
-                  <Download className="w-4 h-4" />
-                  Résumé
-                </a>
+              {/* 3. Tertiary button */}
+              <a
+                href="/resume.pdf"
+                download
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-transparent text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 hover:-translate-y-1 transition-all duration-300"
+              >
+                <Download className="w-4 h-4" />
+                Résumé
+              </a>
 
-              </div>
-
+            </div>
 
             {/* Socials */}
             <div className="flex items-center gap-3 pt-1 animate-fade-in animation-delay-500 flex-wrap">

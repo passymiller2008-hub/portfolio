@@ -21,9 +21,9 @@ export const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <a
-                key={link.href}
+                key={index}
                 href={link.href}
                 className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface transition-colors"
               >
@@ -51,9 +51,9 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden glass-strong animate-fade-in">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <a
-                key={link.href}
+                key={index}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
@@ -61,7 +61,7 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button>Contact Me</Button>
+            <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
           </div>
         </div>
       )}
